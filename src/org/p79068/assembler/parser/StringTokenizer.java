@@ -44,7 +44,8 @@ final class StringTokenizer extends Tokenizer {
 		patterns = new ArrayList<TokenPattern>();
 		patterns.add(new TokenPattern("^[ \t]+", null));  // Whitespace
 		patterns.add(new TokenPattern("^[A-Za-z_][A-Za-z0-9_]*:", TokenType.LABEL));
-		patterns.add(new TokenPattern("^[A-Za-z_][A-Za-z0-9_]*", TokenType.NAME));
+		// add support for unicode names
+		patterns.add(new TokenPattern("^[赋A-Za-z_][A-Za-z0-9_]*", TokenType.NAME));
 		patterns.add(new TokenPattern("^%[A-Za-z][A-Za-z0-9_]*", TokenType.REGISTER));
 		patterns.add(new TokenPattern("^0[xX][0-9a-fA-F]+", TokenType.HEXADECIMAL));
 		patterns.add(new TokenPattern("^-?[0-9]+", TokenType.DECIMAL));

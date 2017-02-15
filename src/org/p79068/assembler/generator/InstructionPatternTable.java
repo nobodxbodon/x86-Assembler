@@ -200,10 +200,12 @@ public class InstructionPatternTable {
 		MODE32_TABLE.add("xchgl"        , opPat(RM32, REG32)         , MODE32  , new int[]{0x87}, new ModRM(0, 1));
 		MODE32_TABLE.add("movb"         , opPat(RM8, REG8)           , MODELESS, new int[]{0x88}, new ModRM(0, 1));
 		MODE32_TABLE.add("movw"         , opPat(RM16, REG16)         , MODE16  , new int[]{0x89}, new ModRM(0, 1));
-		MODE32_TABLE.add("movl"         , opPat(RM32, REG32)         , MODE32  , new int[]{0x89}, new ModRM(0, 1));
+		//MODE32_TABLE.add("movl"         , opPat(RM32, REG32)         , MODE32  , new int[]{0x89}, new ModRM(0, 1));
+		MODE32_TABLE.add("赋"         , opPat(RM32, REG32)         , MODE32  , new int[]{0x89}, new ModRM(0, 1));
 		MODE32_TABLE.add("movb"         , opPat(REG8, RM8)           , MODELESS, new int[]{0x8A}, new ModRM(1, 0));
 		MODE32_TABLE.add("movw"         , opPat(REG16, RM16)         , MODE16  , new int[]{0x8B}, new ModRM(1, 0));
-		MODE32_TABLE.add("movl"         , opPat(REG32, RM32)         , MODE32  , new int[]{0x8B}, new ModRM(1, 0));
+		//MODE32_TABLE.add("movl"         , opPat(REG32, RM32)         , MODE32  , new int[]{0x8B}, new ModRM(1, 0));
+		MODE32_TABLE.add("赋"         , opPat(REG32, RM32)         , MODE32  , new int[]{0x8B}, new ModRM(1, 0));
 		MODE32_TABLE.add("movw"         , opPat(RM16, SREG)          , MODE16  , new int[]{0x8C}, new ModRM(0, 1));
 		MODE32_TABLE.add("movlw"        , opPat(RM32, SREG)          , MODE32  , new int[]{0x8C}, new ModRM(0, 1));
 		MODE32_TABLE.add("leaw"         , opPat(REG16, MEM)          , MODE16  , new int[]{0x8D}, new ModRM(1, 0));
@@ -245,7 +247,8 @@ public class InstructionPatternTable {
 		MODE32_TABLE.add("scasl"        , opPat()                    , MODE32  , new int[]{0xAF});
 		MODE32_TABLE.add("movb"         , opPat(REG8, IMM8)          , MODELESS, new int[]{0xB0}, new RegisterInOpcode(0));
 		MODE32_TABLE.add("movw"         , opPat(REG16, IMM16)        , MODE16  , new int[]{0xB8}, new RegisterInOpcode(0));
-		MODE32_TABLE.add("movl"         , opPat(REG32, IMM32)        , MODE32  , new int[]{0xB8}, new RegisterInOpcode(0));
+		//MODE32_TABLE.add("movl"         , opPat(REG32, IMM32)        , MODE32  , new int[]{0xB8}, new RegisterInOpcode(0));
+		MODE32_TABLE.add("赋"         , opPat(REG32, IMM32)        , MODE32  , new int[]{0xB8}, new RegisterInOpcode(0));
 		MODE32_TABLE.add("rolb"         , opPat(RM8, IMM8)           , MODELESS, new int[]{0xC0}, new ModRM(0, 10));
 		MODE32_TABLE.add("rorb"         , opPat(RM8, IMM8)           , MODELESS, new int[]{0xC0}, new ModRM(0, 11));
 		MODE32_TABLE.add("rclb"         , opPat(RM8, IMM8)           , MODELESS, new int[]{0xC0}, new ModRM(0, 12));
@@ -275,7 +278,8 @@ public class InstructionPatternTable {
 		MODE32_TABLE.add("ldsl"         , opPat(REG32, MEM)          , MODE32  , new int[]{0xC5}, new ModRM(1, 0));
 		MODE32_TABLE.add("movb"         , opPat(RM8, IMM8)           , MODELESS, new int[]{0xC6}, new ModRM(0, 10));
 		MODE32_TABLE.add("movw"         , opPat(RM16, IMM16)         , MODE16  , new int[]{0xC7}, new ModRM(0, 10));
-		MODE32_TABLE.add("movl"         , opPat(RM32, IMM32)         , MODE32  , new int[]{0xC7}, new ModRM(0, 10));
+		//MODE32_TABLE.add("movl"         , opPat(RM32, IMM32)         , MODE32  , new int[]{0xC7}, new ModRM(0, 10));
+		MODE32_TABLE.add("赋"         , opPat(RM32, IMM32)         , MODE32  , new int[]{0xC7}, new ModRM(0, 10));
 		MODE32_TABLE.add("enter"        , opPat(IMM16, IMM8)         , MODELESS, new int[]{0xC8});
 		MODE32_TABLE.add("leave"        , opPat()                    , MODELESS, new int[]{0xC9});
 		MODE32_TABLE.add("lret"         , opPat(IMM16)               , MODELESS, new int[]{0xCA});

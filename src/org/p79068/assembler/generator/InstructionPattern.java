@@ -16,7 +16,7 @@ public final class InstructionPattern {
 	/**
 	 * The regular expression pattern for mnemonics, which is one lowercase letter followed by zero or more lowercase or numeric characters.
 	 */
-	private static Pattern MNEMONIC_PATTERN = Pattern.compile("[a-z][a-z0-9]*");
+	private static Pattern MNEMONIC_PATTERN = Pattern.compile("[赋a-z][a-z0-9]*");
 	
 	
 	
